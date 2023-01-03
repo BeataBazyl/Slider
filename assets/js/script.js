@@ -13,13 +13,13 @@ let startInterval;
 
 const startSlider = function () {
     startInterval = setInterval(
-        (function int() {
+        function int() {
             onImageNext();
-            return int;
-        })(),
+        },
         2000
     );
 };
+
 
 const stopSlider = function () {
 	clearInterval(startInterval);
@@ -52,8 +52,9 @@ const initEvents = function(imagesList, sliderRootElement) {
     navNext.addEventListener('click', function(e) {
         e.stopPropagation();
         fireCustomEvent(navNext, 'js-slider-img-next');
-        stopSlider();
-    });
+});
+navNext.addEventListener("mouseenter", stopSlider);
+navNext.addEventListener("mouseleave", stopSlider);
 
     // todo:
     // utwórz nasłuchiwanie eventu o nazwie [click], który ma uruchomić event [js-slider-img-prev]
@@ -62,8 +63,9 @@ const initEvents = function(imagesList, sliderRootElement) {
     navPrev.addEventListener('click', function(e) {
         e.stopPropagation();
         fireCustomEvent(navPrev, 'js-slider-img-prev');
-        stopSlider();
 });
+navPrev.addEventListener("mouseenter", stopSlider);
+navPrev.addEventListener("mouseleave", stopSlider);
 
     // todo:
     // utwórz nasłuchiwanie eventu o nazwie [click], który ma uruchomić event [js-slider-close]
