@@ -1,6 +1,9 @@
-In this project, I was tasked with working on code written by another programmer. My assignment was to create a slideshow (gallery) that would be triggered by clicking on a selected photo (a <figure> element containing an <img> element). The client already had HTML, CSS, and JS code in place. I was asked to not modify the HTML and CSS, and to maintain the existing conventions in the JavaScript.
+In this project, I was tasked with working on code written by another programmer. 
+My assignment was to create a slideshow (gallery). 
+The client already had HTML, CSS, and JS code in place. 
+I was asked to not modify the HTML and CSS, and to maintain the existing conventions in the JavaScript.
 
-live view: https://beatabazyl.github.io/Slider/
+### live view: https://beatabazyl.github.io/Slider/
 
 ![](./assets/img/img1.png)
 
